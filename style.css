@@ -18,12 +18,6 @@ body {
     background-image: radial-gradient(100% 100% at center, #fff, #797979);
 }
 
-::selection {
-    background: #39f;
-    color: #fff;
-    text-shadow: none;
-}
-
 /* Layout */
 .uk-container {
     margin: auto;
@@ -137,7 +131,6 @@ body {
 /* Define o layout da grade */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais em telas grandes */
     gap: 10px; /* Espaço entre as imagens */
     width: 100%; /* Ajusta a largura da grade para a largura do contêiner pai */
     box-sizing: border-box; /* Inclui padding e border na largura e altura total */
@@ -155,11 +148,4 @@ body {
     max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
     max-height: 100%; /* Garante que a imagem não ultrapasse o contêiner */
     object-fit: contain; /* Faz com que a imagem se ajuste ao contêiner sem distorção */
-}
-
-/* Media query para telas menores */
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: 1fr; /* 1 coluna para telas menores */
-    }
 }
